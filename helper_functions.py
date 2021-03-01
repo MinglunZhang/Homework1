@@ -7,5 +7,7 @@ from os import listdir, remove
 # 3. 'trade_order.p'
 def check_for_and_del_io_files():
     # Your code goes here.
-
+    for path in ["currency_pair.txt", "currency_pair_history.csv", "trade_order.p"]:
+        if path in listdir():
+            remove(path)
     pass # nothing gets returned by this function, so end it with 'pass'.
